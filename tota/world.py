@@ -1,4 +1,4 @@
-from tota.things import Tree, Tower, Ancient
+from tota.things import Tree, Water, Tower, Ancient
 from tota.utils import inside_map
 from tota import settings
 
@@ -39,6 +39,8 @@ class World:
 
                 if char == 'T':
                     self.spawn(Tree(), position)
+                elif char == 'W':
+                    self.spawn(Water(), position)
                 elif char == 'r':
                     self.spawn(Tower(settings.TEAM_RADIANT), position)
                 elif char == 'd':

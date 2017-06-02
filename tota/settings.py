@@ -3,6 +3,7 @@ DEFAULT_COLOR = 'white'
 
 CREEP_LIFE = 100
 TREE_LIFE = 200
+WATER_LIFE = 1000000
 HERO_LIFE = 100
 TOWER_LIFE = 500
 ANCIENT_LIFE = 1000
@@ -44,6 +45,8 @@ STUN_DURATION = 5
 TEAM_RADIANT = 'radiant'
 TEAM_DIRE = 'dire'
 TEAM_NEUTRAL = 'neutral'
+TEAM_TREE = 'tree'
+TEAM_WATER = 'water'
 
 XP_DISTANCE = 10
 XP_CREEP_DEAD = 10
@@ -54,7 +57,9 @@ XP_TO_LEVEL = 100
 TEAM_COLORS = {
     TEAM_RADIANT: 'blue',
     TEAM_DIRE: 'red',
-    TEAM_NEUTRAL: 'green',
+    TEAM_NEUTRAL: 'grey',
+    TEAM_TREE: 'green',
+    TEAM_WATER: 'cyan',
 }
 
 ENEMY_TEAMS = {

@@ -11,7 +11,9 @@ class Thing:
     def __init__(self, name, life, team, acts, position=None):
         if team not in (settings.TEAM_DIRE,
                         settings.TEAM_RADIANT,
-                        settings.TEAM_NEUTRAL):
+                        settings.TEAM_NEUTRAL,
+                        settings.TEAM_TREE,
+                        settings.TEAM_WATER):
             raise Exception('Invalid team name: {}'.format(team))
 
         self.name = name
@@ -74,13 +76,26 @@ class Thing:
 
 class Tree(Thing):
     """The ones that don't move."""
-    ICON = '\u03D4'
+    ICON = '\u2663'
     ICON_BASIC = 'Y'
 
     def __init__(self, position=None):
         super().__init__(name='tree',
                          life=settings.TREE_LIFE,
-                         team=settings.TEAM_NEUTRAL,
+                         team=settings.TEAM_TREE,
+                         acts=False,
+                         position=position)
+
+
+class Water(Thing):
+    """The ones that don't move."""
+    ICON = '\u2248'
+    ICON_BASIC = '~'
+
+    def __init__(self, position=None):
+        super().__init__(name='water',
+                         life=settings.WATER_LIFE,
+                         team=settings.TEAM_WATER,
                          acts=False,
                          position=position)
 
