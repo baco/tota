@@ -243,6 +243,8 @@ class Game:
                 if isinstance(thing, Hero):
                     thing.respawn_at = (self.world.t
                                         + settings.HERO_RESPAWN_COOLDOWN)
+                if isinstance(thing, Tower):
+                    thing.position = ()
                 if isinstance(thing, (Hero, Tower)):
                     enemy_team = settings.ENEMY_TEAMS[thing.team]
                     self.scores[enemy_team] += 1
